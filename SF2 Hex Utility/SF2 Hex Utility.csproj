@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7106BFA-2798-4F2E-9F4B-B5884393829B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SF2_Hex_Utility</RootNamespace>
+    <AssemblyName>SF2 Hex Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoyerMoore.cs" />
+    <Compile Include="ByteConversion.cs" />
+    <Compile Include="EditField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditField.Designer.cs">
+      <DependentUpon>EditField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFieldDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditFieldDetails.Designer.cs">
+      <DependentUpon>EditFieldDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFieldList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditFieldList.Designer.cs">
+      <DependentUpon>EditFieldList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditHexLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditHexLocation.Designer.cs">
+      <DependentUpon>EditHexLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditHexLocations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditHexLocations.Designer.cs">
+      <DependentUpon>EditHexLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditHexLocationsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditHexLocationsList.Designer.cs">
+      <DependentUpon>EditHexLocationsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexLocations.cs" />
+    <Compile Include="HexRenderer.cs" />
+    <Compile Include="HexLocation.cs" />
+    <Compile Include="NewHexLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewHexLocations.Designer.cs">
+      <DependentUpon>NewHexLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTesting.Designer.cs">
+      <DependentUpon>FormTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rom.cs" />
+    <EmbeddedResource Include="EditField.resx">
+      <DependentUpon>EditField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFieldDetails.resx">
+      <DependentUpon>EditFieldDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFieldList.resx">
+      <DependentUpon>EditFieldList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditHexLocation.resx">
+      <DependentUpon>EditHexLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditHexLocations.resx">
+      <DependentUpon>EditHexLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditHexLocationsList.resx">
+      <DependentUpon>EditHexLocationsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewHexLocations.resx">
+      <DependentUpon>NewHexLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormTesting.resx">
+      <DependentUpon>FormTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_red_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_bluesquare_eidt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_docblue_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_doc_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_save_all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_scroll_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_doc_blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_doc_words.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_cylinder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_arrow_grey_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_arrow_grey_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_plus_sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_checkmark_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oga_checkmark_grey3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
